@@ -14,9 +14,6 @@ import './styles/styles.scss';
 
 const store = configureStore();
 
-const expenseOne = store.dispatch(addExpense({description: 'Water bill', amount: 4500}));
-const expenseTwo = store.dispatch(addExpense({description: 'Gas bill', amount: 3000, createdAt: 1000}));
-const expenseThree = store.dispatch(addExpense({description: 'Rent', amount: 10500}));
 
 
 // setTimeout(() => {
