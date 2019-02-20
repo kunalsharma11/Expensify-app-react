@@ -6,7 +6,9 @@ import moment from 'moment';
 
 export default (expenses, {text, sortBy, startDate, endDate}) => {
     return expenses.filter((expense) => {
+        console.log('1');
         const createdAtMoment = moment(expense.createdAt);
+        console.log('2');
        // const startDateMatch = typeof startDate !== 'number' || expense.createdAt >= startDate;
        // const endDateMatch = typeof endDate !== 'number' || expense.createdAt <= endDate;
        //using query methods for moments

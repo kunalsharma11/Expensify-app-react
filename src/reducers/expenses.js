@@ -4,7 +4,8 @@ const expensesReducerDefaultState = [];
 export default (state = expensesReducerDefaultState, action) => {
     switch(action.type){
         case 'ADD_EXPENSE':
-         return [...state, action.expenses];  //spread operator
+        console.log("Here we are ", action.expense)
+         return [...state, action.expense];  //spread operator
         case 'REMOVE_EXPENSE':
          return state.filter(({id}) => {
             return id!==action.id;
@@ -20,6 +21,8 @@ export default (state = expensesReducerDefaultState, action) => {
                 return expenses;
             };
         });
+        case 'SET_EXPENSES':
+        return action.expenses;
         
          default:
             return state;

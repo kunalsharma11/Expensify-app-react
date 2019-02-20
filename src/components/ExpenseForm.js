@@ -2,7 +2,7 @@ import React from 'react';
 //moment.js library for time & airbnb react-dates open proj
 import moment from 'moment';
 import { SingleDatePicker} from 'react-dates';
-import 'react-dates/lib/css/_datepicker.css';
+
 
 //const date = new Date();
 const now = moment();
