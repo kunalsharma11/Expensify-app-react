@@ -1,8 +1,12 @@
-#Git commands
+<h2>Techinal Stuff</h2>
+<ul>
+  <li>React</li>
+  <li>Redux</li>
+  <li>React Routing</li>
+  <li>Firebase(database & Authetication)</li>  
+  <li>React</li>
+</ul>
 
 
-git init - create a new git repo
-git status - view the changes to your project code
-git add- add files to staging
-git commit- creates a new commit with files from staging area
-git log- view recent commits
+
+This project is part of my React Course (by Andrew Mead)
