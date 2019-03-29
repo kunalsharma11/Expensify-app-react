@@ -100,9 +100,10 @@ export const startEditExpense = (id, updates) => {
 export const setExpenses = (expenses) => ({
     type: 'SET_EXPENSES',
     expenses
+    
 });
 
-export const startSetExpense = () => {
+export const startSetExpenses = () => {
     return (dispatch) => {
         return database.ref('expenses').once('value').then((snapshot) => {
             const expenses = [];
