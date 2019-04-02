@@ -3,10 +3,7 @@ import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker} from 'react-dates';
 
-
-//const date = new Date();
-const now = moment();
-//console.log(now.format('MMM Do, YYYY'));  
+const now = moment(); 
 
 export default class ExpenseForm extends React.Component{
     constructor(props) {
@@ -42,7 +39,6 @@ export default class ExpenseForm extends React.Component{
 
     onAmountChange =(e) => {
         const amount = e.target.value;
-        //using regular expression in if, check regex101 website
         if(!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)){
         this.setState(() => ({
             amount

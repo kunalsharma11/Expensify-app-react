@@ -2,35 +2,11 @@ import uuid from 'uuid';
 import database from '../firebase/firebase';
 
 
-
-//for dispatching functions, redux-thunk is used module
-
-// add expense
 export const addExpense = (expense) => ({
     type: 'ADD_EXPENSE',
     expense
 });
 
-// export const addExpense = (expense
-//     // {
-//     //     description = '', 
-//     //     note = '', 
-//     //     amount = 0, 
-//     //     createdAt =0
-//     // } = {}
-// ) => ({
-//     type: 'ADD_EXPENSE',
-//     //for generating unique id use uuid library of npm
-//     // expenses: {
-//     //    id: uuid(),
-//     //    description,
-//     //    note,
-//     //    amount,
-//     //    createdAt 
-//     // }
-//     expense
-
-// });
 
 //dispatching function, possible because of redux-thunk
 export const startAddExpense = (expenseData = {}) => {
@@ -46,17 +22,12 @@ export const startAddExpense = (expenseData = {}) => {
         const expense = {description, note, amount, createdAt};
         return database.ref('expenses').push(expense)
         .then((ref) => {
-            // console.log(`Id is ${ref.key}`);
-            // console.log(`Id is ${expense.createdAt}`);
             dispatch(addExpense({
                 id:ref.key,
                 ...expense
             })
            
             )})
-        // ).catch((e)=> {
-            // console.log('Error fetching data', e)
-            // });
     };
 
 };

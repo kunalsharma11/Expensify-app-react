@@ -21,9 +21,6 @@ export class EditExpensePage extends React.Component {
         <ExpenseForm 
         expense={this.props.expense}
         onSubmit={this.onSubmit}
-        
-            //dispatch the action to edit the expense
-            //redirect to the dashboard
             />
         <button onClick={this.onRemove }> Remove </button>
     </div>
